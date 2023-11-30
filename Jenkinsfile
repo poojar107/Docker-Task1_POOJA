@@ -25,7 +25,7 @@ pipeline
         {
             steps
             {
-                sh ' docker build -t app /var/lib/jenkins/workspace/DOCKER/Docker-Task1/ '
+                sh ' docker build -t app /var/lib/jenkins/workspace/DOCKER/Docker-Task1_POOJA/ '
             }
         }
         stage("Run")
