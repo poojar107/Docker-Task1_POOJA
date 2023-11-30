@@ -18,21 +18,21 @@ pipeline
         {   
             steps
             {
-                sh ' sudo git clone -b pooja https://github.com/poojar107/Docker-Task1_POOJA.git '
+                sh ' git clone -b pooja https://github.com/poojar107/Docker-Task1_POOJA.git '
             }
         }
         stage("Build")
         {
             steps
             {
-                sh ' sudo docker build -t app /var/lib/jenkins/workspace/DOCKER/Docker-Task1_POOJA/ '
+                sh ' docker build -t app /var/lib/jenkins/workspace/DOCKER/Docker-Task1_POOJA/ '
             }
         }
         stage("Run")
         {
             steps
             {
-                sh ' sudo docker run -it -d app '
+                sh '  docker run -it -d app '
             }
         }
     }
