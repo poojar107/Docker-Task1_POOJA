@@ -8,23 +8,23 @@ pipeline
             steps
             {
                 sh ' sudo rm -rf /var/lib/jenkins/workspace/Docker/* '
-                sh ' docker stop $(docker ps -a -q) '
-                sh ' docker rm $(docker ps -a -q) '
-                sh ' docker rmi $(docker images -q) '
+                //sh ' docker stop $(docker ps -a -q) '
+                //sh ' docker rm $(docker ps -a -q) '
+                //sh ' docker rmi $(docker images -q) '
             }
         }
         stage("Clone")
         {   
             steps
             {
-                sh ' sudo git clone -b python https://github.com/RameshXT/Docker-jenkins-tasks.git '
+                sh ' sudo git clone -b pooja https://github.com/poojar107/Docker-Task1_POOJA.git '
             }
         }
         stage("Build")
         {
             steps
             {
-                sh ' sudo docker build -t app /var/lib/jenkins/workspace/Docker/Docker-jenkins-tasks  '
+                sh ' sudo docker build -t app /var/lib/jenkins/workspace/DOCKER/Docker-Task1_POOJA/ '
             }
         }
         stage("Run")
