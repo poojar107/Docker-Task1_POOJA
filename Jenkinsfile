@@ -7,7 +7,7 @@ pipeline
         {
             steps
             {
-                echo ' Hello "
+                echo ' Hello '
                 //sh ' sudo rm -rf /var/lib/jenkins/workspace/Docker/* '
                 //sh ' docker stop $(docker ps -a -q) '
                 //sh ' docker rm $(docker ps -a -q) '
